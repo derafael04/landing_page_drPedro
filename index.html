@@ -11,7 +11,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,11 +21,12 @@
 </head>
 <body>
     <!-- Header Fixo -->
-    <header class="header" id="header">
+    <header class="header header-dark" id="header">
         <div class="container header-content">
             <div class="header-left">
                 <div class="header-logo">
-                    <img src="images/logo.png" alt="Dr. Pedro Moreira - Logo">
+                    <img src="images/logo_clara.png" alt="Dr. Pedro Moreira - Logo" class="logo-light">
+                    <img src="images/logo.png" alt="Dr. Pedro Moreira - Logo" class="logo-dark">
                 </div>
             </div>
             <nav class="nav-desktop">
@@ -72,19 +73,26 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
+    <section class="hero hero-dark">
+        <div class="hero-bg"></div>
+        <div class="hero-content-wrapper">
             <div class="hero-text">
-                <span class="hero-tag">Cirurgião Coloproctologista</span>
-                <h2 class="hero-title">Especialista em Câncer de Intestino e Reto</h2>
-                <p class="hero-subtitle">Diagnóstico preciso e tratamento humanizado com técnicas minimamente invasivas. Fellowship em Videocirurgia e cuidado de excelência para sua saúde intestinal.</p>
+                <div class="hero-line"></div>
+                <span class="hero-tag">Dr. Pedro Moreira</span>
+                <h1 class="hero-title">COLOPROCTOLOGIA</h1>
+                <div class="hero-credentials">
+                    <p>CRM-GO 23.973 | RQE 17.115</p>
+                    <p>Especialista em Câncer de Intestino e Reto</p>
+                    <p><strong>Cirurgia a Laser</strong> - Mais conforto no pós-operatório</p>
+                </div>
                 <div class="hero-buttons">
-                    <a href="https://wa.me/5562996006080?text=Olá! Gostaria de agendar uma consulta com o Dr. Pedro Moreira." class="btn btn-primary">
+                    <a href="https://wa.me/5562996006080?text=Olá! Gostaria de agendar uma consulta com o Dr. Pedro Moreira." class="btn btn-primary-light">
                         <i class="fab fa-whatsapp"></i> Agende sua Consulta
                     </a>
-                    <a href="#sobre" class="btn btn-secondary">Conheça o Médico</a>
                 </div>
+                <a href="#sobre" class="hero-scroll-btn" aria-label="Rolar para baixo">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
             </div>
             <div class="hero-image">
                 <img src="images/fotodr.png" alt="Dr. Pedro Moreira - Coloproctologista">
@@ -114,15 +122,15 @@
                     <div class="about-credentials">
                         <div class="credential-item">
                             <i class="fas fa-graduation-cap"></i>
-                            <span>Medicina - Unievangélica</span>
+                            <span>Medicina: Universidade Evangélica de Goiás</span>
                         </div>
                         <div class="credential-item">
                             <i class="fas fa-hospital"></i>
-                            <span>Residência e Especialização - UFG</span>
+                            <span>Especialização: Hospital das Clínicas - UFG</span>
                         </div>
                         <div class="credential-item">
                             <i class="fas fa-award"></i>
-                            <span>Fellowship - Hospital de Amor</span>
+                            <span>Fellowship: Hospital de Amor - Barretos/SP</span>
                         </div>
                         <div class="credential-item">
                             <i class="fas fa-globe-americas"></i>
@@ -162,7 +170,7 @@
                         <i class="fas fa-ribbon"></i>
                     </div>
                     <h3>Câncer Colorretal</h3>
-                    <p>Investigação, diagnóstico precoce e encaminhamento terapêutico adequado.</p>
+                    <p>Investigação, diagnóstico precoce e encaminhamento terapêutico adequado e cirurgia para tratamento do Câncer.</p>
                 </div>
                 <div class="specialty-card">
                     <div class="specialty-icon">
@@ -261,6 +269,16 @@
                         <p>Quando necessário, realizo procedimentos com foco em segurança, resultado e recuperação humanizada.</p>
                     </div>
                 </div>
+                <!-- Tratamento 8 - DESTAQUE -->
+                <div class="treatment-item treatment-highlight">
+                    <button type="button" class="treatment-header" aria-expanded="false">
+                        <span class="treatment-title"><i class="fas fa-star"></i> Cirurgia a Laser</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="treatment-content">
+                        <p><strong>Tecnologia de ponta para mais conforto no pós-operatório.</strong> Técnica moderna e minimamente invasiva para tratamento de hemorroidas, fissuras e fístulas. Benefícios: menor dor, menos sangramento, recuperação mais rápida e retorno às atividades em menos tempo.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -336,7 +354,7 @@
                             <i class="fas fa-check-circle"></i>
                             <div>
                                 <strong>Formação nas melhores instituições</strong>
-                                <p>Graduação e especialização na USP, com aperfeiçoamento internacional nos EUA.</p>
+                                <p>Especialização: Hospital das Clínicas - UFG, com aperfeiçoamento internacional nos EUA.</p>
                             </div>
                         </li>
                         <li>
@@ -440,7 +458,7 @@
                         <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-content">
-                        <p>Sim, atendemos diversos convênios médicos. Entre os principais estão: Bradesco Saúde, SulAmérica, Amil, Unimed e Porto Seguro. Para confirmar se seu plano é aceito, entre em contato conosco pelo WhatsApp.</p>
+                        <p>No momento, o atendimento é realizado apenas de forma particular. Porém, fornecemos toda a documentação necessária para que você possa solicitar o reembolso junto ao seu plano de saúde.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -449,7 +467,7 @@
                         <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-content">
-                        <p>O agendamento pode ser feito pelo WhatsApp, telefone ou e-mail. Buscamos agendar sua consulta no horário mais conveniente para você, oferecendo flexibilidade de horários durante a semana e aos sábados pela manhã.</p>
+                        <p>O agendamento é feito exclusivamente pelo WhatsApp. Buscamos agendar sua consulta no horário mais conveniente para você, com atendimento de segunda a sexta-feira, das 08h às 18h.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -458,16 +476,16 @@
                         <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-content">
-                        <p>Nossas consultas têm duração média de 30 a 45 minutos. Acreditamos que é fundamental ter tempo adequado para ouvir o paciente, realizar um exame físico completo e esclarecer todas as dúvidas.</p>
+                        <p>As consultas têm duração de 30 minutos a 1 hora. Acreditamos que é fundamental ter tempo adequado para ouvir o paciente, realizar um exame físico completo e esclarecer todas as dúvidas.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-header" aria-expanded="false">
-                        <span>Preciso de preparo para os exames de endoscopia e colonoscopia?</span>
+                        <span>Preciso de preparo para a colonoscopia?</span>
                         <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-content">
-                        <p>Sim, ambos os exames requerem preparo específico. Para a endoscopia, é necessário jejum de pelo menos 8 horas. A colonoscopia exige uma dieta específica e uso de laxantes no dia anterior. Todas as orientações serão fornecidas detalhadamente no momento do agendamento.</p>
+                        <p>Sim, a colonoscopia exige uma dieta específica e uso de laxantes no dia anterior ao exame. Todas as orientações serão fornecidas detalhadamente no momento do agendamento.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -476,7 +494,7 @@
                         <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-content">
-                        <p>A recomendação geral é iniciar o rastreamento aos 45-50 anos, com repetição a cada 10 anos se o resultado for normal. Pacientes com histórico familiar de câncer colorretal ou outros fatores de risco podem precisar iniciar mais cedo e fazer exames com maior frequência.</p>
+                        <p>A recomendação é iniciar o rastreamento a partir dos 45 anos. A frequência de repetição dependerá do resultado da última colonoscopia, podendo variar de 1 ano até 10 anos.</p>
                     </div>
                 </div>
             </div>
@@ -527,10 +545,8 @@
                 <div class="footer-social">
                     <h4>Redes Sociais</h4>
                     <div class="social-links">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/dr.pedrocmoreira?igsh=MWsweHphbTF5aGFneA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.doctoralia.com.br/pedro-moreira-2/coloproctologista/goiania" target="_blank" rel="noopener noreferrer" aria-label="Doctoralia"><i class="fas fa-user-md"></i></a>
                     </div>
                 </div>
             </div>
