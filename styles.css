@@ -998,6 +998,57 @@ p {
     color: var(--text-dark);
 }
 
+/* Destaque para Cirurgia de Câncer - Mesma cor do Laser */
+.treatment-highlight-cancer {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 20px rgba(44, 55, 38, 0.3);
+    position: relative;
+    overflow: visible;
+}
+
+.treatment-highlight-cancer::before {
+    content: 'DESTAQUE';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #d4af37;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
+}
+
+.treatment-highlight-cancer .treatment-header {
+    background: transparent;
+    color: var(--white);
+}
+
+.treatment-highlight-cancer .treatment-header:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.treatment-highlight-cancer .treatment-title {
+    color: var(--white);
+}
+
+.treatment-highlight-cancer .treatment-title i {
+    color: #d4af37;
+    margin-right: 8px;
+}
+
+.treatment-highlight-cancer .treatment-header i {
+    color: var(--white);
+}
+
+.treatment-highlight-cancer .treatment-content {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-dark);
+}
+
 .treatment-header {
     width: 100%;
     display: flex;
