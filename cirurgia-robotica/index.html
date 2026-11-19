@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cirurgia robótica do intestino e do reto em Goiânia | Dr. Pedro Moreira</title>
+    <meta name="description" content="Cirurgia robótica para doenças do intestino e do reto em Goiânia, com o Dr. Pedro Moreira, cirurgião coloproctologista. CRM-GO 23.973, RQE 17.115.">
+    <meta name="author" content="Dr. Pedro Moreira">
+    <meta name="theme-color" content="#e4eaeb">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+<body>
+    <a class="skip" href="#mudancas">Pular a animação</a>
+
+    <header class="top" id="top">
+        <a class="top__logo" href="../" aria-label="Dr. Pedro Moreira, página inicial">
+            <img src="../images/logo.png" alt="Dr. Pedro Moreira, cirurgião coloproctologista" width="900" height="400">
+        </a>
+        <nav class="top__nav" aria-label="Seções">
+            <a href="#mudancas">O que muda</a>
+            <a href="#indicacoes">Indicações</a>
+            <a href="#etapas">Etapas</a>
+            <a href="#medico">Dr. Pedro</a>
+            <a href="#duvidas">Dúvidas</a>
+        </nav>
+        <a class="btn btn--small" href="https://wa.me/5562996006080?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20cirurgia%20rob%C3%B3tica%20com%20o%20Dr.%20Pedro%20Moreira.">Agendar consulta</a>
+    </header>
+
+    <main>
+        <section class="stage" id="stage" aria-label="Demonstração do robô cirúrgico">
+            <div class="stage__pin">
+                <canvas class="stage__canvas" id="scene" aria-hidden="true"></canvas>
+
+                <div class="hero" id="hero">
+                    <h1>Cirurgia robótica do intestino e do reto</h1>
+                    <p class="hero__lead">Cortes de cerca de um centímetro, imagem ampliada em 3D e pinças que giram dentro do corpo. Em Goiânia, com o Dr. Pedro Moreira, cirurgião coloproctologista.</p>
+                    <div class="hero__actions">
+                        <a class="btn" href="https://wa.me/5562996006080?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20cirurgia%20rob%C3%B3tica%20com%20o%20Dr.%20Pedro%20Moreira.">Agendar consulta pelo WhatsApp</a>
+                        <span class="hero__reg">CRM-GO 23.973 e RQE 17.115</span>
+                    </div>
+                    <p class="hero__hint">Tem uma jabuticaba em cima da mesa. Role a página e o robô vai buscá-la.</p>
+                </div>
+
+                <div class="beats">
+                    <article class="beat beat--right">
+                        <h2>Esta fruta tem pouco mais de um centímetro</h2>
+                        <p>Durante a cirurgia, a câmera do robô amplia a imagem em até dez vezes, em três dimensões. O cirurgião enxerga vasos e nervos finos que passariam despercebidos a olho nu.</p>
+                    </article>
+                    <article class="beat beat--left">
+                        <h2>Pegar sem amassar</h2>
+                        <p>O sistema filtra o tremor natural das mãos e reduz a escala do movimento. Um gesto de três centímetros no console pode virar um centímetro dentro do corpo.</p>
+                    </article>
+                    <article class="beat beat--right">
+                        <h2>O punho gira onde a mão não chega</h2>
+                        <p>As pinças dobram e giram em espaços estreitos como a pelve, onde ficam o reto e os nervos ligados ao controle da urina e à função sexual. Trabalhar ali com mais alcance ajuda a preservar o que não precisa ser retirado.</p>
+                    </article>
+                    <article class="beat beat--left">
+                        <h2>O robô não opera sozinho</h2>
+                        <p>Cada movimento vem das mãos do Dr. Pedro, sentado no console, dentro da sala de cirurgia. O robô não decide nada. Ele repete o gesto do cirurgião com mais firmeza.</p>
+                    </article>
+                </div>
+
+                <div class="scale" id="scale" aria-hidden="true">
+                    <span class="scale__bar" id="scaleBar"></span>
+                    <span class="scale__label" id="scaleLabel">1 cm</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="block changes" id="mudancas">
+            <div class="wrap">
+                <h2 class="title">O que muda para quem é operado</h2>
+
+                <figure class="cuts" id="cuts">
+                    <div class="cuts__row">
+                        <p class="cuts__name">Cirurgia aberta</p>
+                        <div class="cuts__track"><span class="cut" style="--w: 90%"></span></div>
+                        <p class="cuts__note">Uma incisão de 15 a 20 cm no abdome.</p>
+                    </div>
+                    <div class="cuts__row">
+                        <p class="cuts__name">Cirurgia robótica</p>
+                        <div class="cuts__track cuts__track--robot">
+                            <span class="cut" style="--w: 4%"></span>
+                            <span class="cut" style="--w: 4%"></span>
+                            <span class="cut" style="--w: 4%"></span>
+                            <span class="cut" style="--w: 4%"></span>
+                            <span class="cut" style="--w: 25%"></span>
+                        </div>
+                        <p class="cuts__note">Quatro ou cinco incisões de cerca de 1 cm e uma de 4 a 6 cm, por onde sai o trecho de intestino retirado.</p>
+                    </div>
+                    <div class="cuts__ruler" aria-hidden="true">
+                        <span>0</span><span>5 cm</span><span>10 cm</span><span>15 cm</span><span>20 cm</span>
+                    </div>
+                    <figcaption>Tamanhos desenhados em proporção. As medidas são as mais comuns e variam de acordo com o procedimento.</figcaption>
+                </figure>
+
+                <dl class="effects">
+                    <div>
+                        <dt>Menos dor nos primeiros dias</dt>
+                        <dd>Cortes menores agridem menos a parede do abdome, e a necessidade de analgésicos fortes tende a ser menor.</dd>
+                    </div>
+                    <div>
+                        <dt>Menor perda de sangue</dt>
+                        <dd>Com a imagem ampliada, os vasos são identificados e controlados antes de sangrar.</dd>
+                    </div>
+                    <div>
+                        <dt>Alta mais cedo, na maioria dos casos</dt>
+                        <dd>O intestino costuma voltar a funcionar antes, e isso encurta a internação.</dd>
+                    </div>
+                    <div>
+                        <dt>Volta à rotina em menos tempo</dt>
+                        <dd>Caminhar, dirigir e trabalhar voltam a ser possíveis antes do que seria após uma cirurgia aberta.</dd>
+                    </div>
+                </dl>
+
+                <p class="aside">Nem todo caso é para o robô. A indicação depende do diagnóstico, de cirurgias anteriores e das condições de saúde de cada pessoa. Isso é decidido em consulta, com os exames em mãos.</p>
+            </div>
+        </section>
+
+        <section class="block uses" id="indicacoes">
+            <div class="wrap uses__grid">
+                <h2 class="title">Quando a via robótica costuma ser indicada</h2>
+                <ul class="uses__list">
+                    <li>
+                        <h3>Câncer de reto</h3>
+                        <p>O reto fica no fundo da pelve, cercado de nervos e vasos. É a região onde a articulação das pinças faz mais diferença.</p>
+                    </li>
+                    <li>
+                        <h3>Câncer de cólon</h3>
+                        <p>Retirada do trecho doente do intestino grosso junto com os linfonodos da região, por pequenas incisões.</p>
+                    </li>
+                    <li>
+                        <h3>Diverticulite</h3>
+                        <p>Crises repetidas ou complicadas, quando a retirada do segmento afetado passa a ser recomendada.</p>
+                    </li>
+                    <li>
+                        <h3>Doença de Crohn e retocolite</h3>
+                        <p>Nos casos em que o tratamento clínico não basta e a cirurgia entra no plano.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="block steps" id="etapas">
+            <div class="wrap">
+                <h2 class="title">Da primeira consulta à alta</h2>
+                <ol class="steps__list">
+                    <li>
+                        <h3>Consulta e exames</h3>
+                        <p>Conversa sem pressa, exame físico e revisão do que você já tem em mãos, como colonoscopia, biópsia e exames de imagem.</p>
+                    </li>
+                    <li>
+                        <h3>Plano de tratamento</h3>
+                        <p>Você fica sabendo qual cirurgia é indicada, por qual via e o que esperar. Nos casos de câncer, o plano é alinhado com a oncologia.</p>
+                    </li>
+                    <li>
+                        <h3>Dia da cirurgia</h3>
+                        <p>Anestesia geral. O Dr. Pedro opera no console, e a equipe permanece ao lado da mesa durante todo o procedimento.</p>
+                    </li>
+                    <li>
+                        <h3>Recuperação</h3>
+                        <p>Você é estimulado a caminhar cedo. Depois da alta, os retornos acompanham a cicatrização e os resultados dos exames.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="block doctor" id="medico">
+            <div class="wrap doctor__grid">
+                <figure class="doctor__photo">
+                    <img src="img/dr-pedro.jpg" alt="Dr. Pedro Moreira" width="960" height="1200" loading="lazy">
+                </figure>
+                <div class="doctor__text">
+                    <h2 class="title">Quem está no console</h2>
+                    <p>Dr. Pedro Moreira é cirurgião coloproctologista. Trata doenças do intestino, do reto e do ânus, com dedicação especial ao câncer colorretal.</p>
+                    <p>No consultório, a prioridade é que você entenda o que está acontecendo com o seu corpo e participe das decisões.</p>
+                    <ul class="doctor__cv">
+                        <li>Especialização em coloproctologia no Hospital das Clínicas da UFG</li>
+                        <li>Fellowship em oncologia no Hospital de Amor, em Barretos</li>
+                        <li>Aperfeiçoamento na Cleveland Clinic, nos Estados Unidos</li>
+                        <li>CRM-GO 23.973 e RQE 17.115</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="block faq" id="duvidas">
+            <div class="wrap faq__grid">
+                <h2 class="title">Dúvidas comuns</h2>
+                <div class="faq__list">
+                    <details>
+                        <summary>O robô pode errar ou agir por conta própria?</summary>
+                        <p>Não. O robô não tem autonomia. Ele só se move enquanto o cirurgião está com as mãos nos controles e os olhos no visor. Se o cirurgião se afasta do console, os instrumentos param.</p>
+                    </details>
+                    <details>
+                        <summary>Todo paciente pode ser operado com o robô?</summary>
+                        <p>Não. Algumas situações pedem cirurgia aberta ou videolaparoscopia. A escolha leva em conta o tipo de doença, cirurgias abdominais anteriores e o seu estado geral de saúde.</p>
+                    </details>
+                    <details>
+                        <summary>Quanto tempo vou ficar internado?</summary>
+                        <p>Depende do procedimento e de como o seu organismo reage. Em cirurgias de intestino, a internação costuma ser de alguns dias. Na consulta você recebe uma previsão para o seu caso.</p>
+                    </details>
+                    <details>
+                        <summary>O plano de saúde cobre?</summary>
+                        <p>As consultas são particulares, e o consultório fornece a documentação para pedido de reembolso. A cobertura da cirurgia e do uso do robô varia conforme o plano e o hospital. A equipe orienta você sobre isso antes de marcar o procedimento.</p>
+                    </details>
+                    <details>
+                        <summary>Como agendar uma consulta?</summary>
+                        <p>Pelo WhatsApp (62) 99600-6080, de segunda a sexta, das 8h às 18h. Se já tiver exames, leve todos no dia da consulta.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="block contact" id="contato">
+            <div class="wrap contact__grid">
+                <div>
+                    <h2 class="title">Traga seus exames e suas perguntas</h2>
+                    <p class="contact__lead">Na consulta, o Dr. Pedro avalia o seu caso e diz com clareza se a cirurgia robótica é o melhor caminho para você.</p>
+                    <a class="btn" href="https://wa.me/5562996006080?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20cirurgia%20rob%C3%B3tica%20com%20o%20Dr.%20Pedro%20Moreira.">Agendar consulta pelo WhatsApp</a>
+                </div>
+                <address class="contact__info">
+                    <p><strong>Consultório</strong>Av. Portugal, 1148, sala B-3802<br>Ed. Órion Business, Setor Marista<br>Goiânia, GO</p>
+                    <p><strong>Atendimento</strong>Segunda a sexta, das 8h às 18h</p>
+                    <p><strong>WhatsApp</strong><a href="https://wa.me/5562996006080">(62) 99600-6080</a></p>
+                    <p><a href="https://www.google.com/maps/search/?api=1&query=Ed.+%C3%93rion+Business+%26+Health+Complex+Goi%C3%A2nia" target="_blank" rel="noopener">Abrir no Google Maps</a></p>
+                </address>
+            </div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <div class="wrap foot__grid">
+            <p>Dr. Pedro Moreira, cirurgião coloproctologista. CRM-GO 23.973, RQE 17.115.</p>
+            <p>As informações desta página são educativas e não substituem a consulta médica. Os resultados variam de pessoa para pessoa.</p>
+            <p><a href="../">Conheça o consultório</a> <a href="https://www.instagram.com/dr.pedrocmoreira" target="_blank" rel="noopener">Instagram</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
